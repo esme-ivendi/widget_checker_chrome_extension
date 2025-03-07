@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Query the active tab in the current window
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (!tabs.length) {
-        document.getElementById("output").textContent = "No active tab found.";
+        document.getElementById("requestURL").textContent = "No active tab found.";
         return;
       }
       
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, (results) => {
         // results is an array with one object per frame in which the script was executed.
         const widgetSrc = results && results[0] ? results[0].result : "Error extracting widget.";
-        document.getElementById("output").textContent = widgetSrc;
+        document.getElementById("requestURL").textContent = widgetSrc;
       });
     const copyButton = document.getElementById("copyURLButton");
     copyButton.addEventListener("click", copyURLButton);
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function copyURLButton() {
     console.log("Hello from Button!")
     // Get the text field
-    const outputElement = document.getElementById("output");
+    const outputElement = document.getElementById("requestURL");
     const textToCopy = outputElement.innerText || outputElement.textContent;
 
     navigator.clipboard.writeText(textToCopy).then(() => {

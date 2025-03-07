@@ -16,46 +16,162 @@
         <h2>iVendi Widget Checker</h2>
     </div>
     <div class="output-container">
-        <div id="output" class="output-box">Loading...</div>
+        <div id="requestURL" class="output-box">Loading...</div>
         <button id="copyURLButton" class="copy-btn">Copy text</button>
     </div>
     
-    <table>
-        <thead>
-            <tr>
-                <th>Param</th>
-                <th>Example</th>
-                <th>Value Used</th>
-                <th>Error</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Param 1</td>
-                <td>Example 1</td>
-                <td>Value 1</td>
-                <td class="checkmark">&#10004;</td>
-            </tr>
-            <tr>
-                <td>Param 2</td>
-                <td>Example 2</td>
-                <td>Value 2</td>
-                <td class="cross">&#10008;</td>
-            </tr>
-            <tr>
-                <td>Param 3</td>
-                <td>Example 3</td>
-                <td>Value 3</td>
-                <td class="checkmark">&#10004;</td>
-            </tr>
-            <tr>
-                <td>Param 4</td>
-                <td>Example 4</td>
-                <td>Value 4</td>
-                <td class="cross">&#10008;</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Example</th>
+                    <th>Value Used</th>
+                    <th>Error ?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>username</td>
+                    <td>string</td>
+                    <td>Value 1</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>quoteeUid</td>
+                    <td>string</td>
+                    <td>Value 2</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>class</td>
+                    <td>car, lcv, or motorbike</td>
+                    <td>Value 3</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>condition</td>
+                    <td>used or new</td>
+                    <td>Value 4</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>vrm</td>
+                    <td>string</td>
+                    <td>Value 5</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>registrationDate</td>
+                    <td>DD/MM/YYYY</td>
+                    <td>Value 6</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>capCode</td>
+                    <td>string</td>
+                    <td>Value 7</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>capId</td>
+                    <td>number</td>
+                    <td>Value 8</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>cashPrice</td>
+                    <td>number</td>
+                    <td>Value 9</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>vatIncluded</td>
+                    <td>true or false</td>
+                    <td>Value 10</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>vatQualifying</td>
+                    <td>true or false</td>
+                    <td>Value 11</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>excludeVatAsDeposit</td>
+                    <td>true or false</td>
+                    <td>Value 12</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>currentOdometerReading</td>
+                    <td>number</td>
+                    <td>Value 13</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>vehicleImageUrl</td>
+                    <td>string</td>
+                    <td>Value 14</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>term</td>
+                    <td>number</td>
+                    <td>Value 15</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>cashDepositType</td>
+                    <td>flatRate or percentageOfCashPrice</td>
+                    <td>Value 16</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>cashDeposit</td>
+                    <td>number</td>
+                    <td>Value 17</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>annualDistance</td>
+                    <td>number</td>
+                    <td>Value 18</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>dateOnForecourt</td>
+                    <td>dd/mm/yyyy</td>
+                    <td>Value 19</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>usePersistedOptions</td>
+                    <td>true or false</td>
+                    <td>Value 20</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>add-functional_consent</td>
+                    <td>true or false</td>
+                    <td>Value 21</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+                <tr>
+                    <td>add-analytical_consent</td>
+                    <td>true or false</td>
+                    <td>Value 22</td>
+                    <td class="cross">&#10008;</td>
+                </tr>
+                <tr>
+                    <td>add-marketing_consent</td>
+                    <td>true or false</td>
+                    <td>Value 23</td>
+                    <td class="checkmark">&#10004;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     
     <div class="response-results">
         <h4>Response Results</h4>
