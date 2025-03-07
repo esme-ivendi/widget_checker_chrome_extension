@@ -20,6 +20,8 @@
         <button id="copyURLButton" class="copy-btn">Copy text</button>
     </div>
     
+    <details>
+    <summary>Click to see request parameters table</summary>
     <div class="table-container">
         <table>
             <thead>
@@ -56,9 +58,9 @@
                     <td class="cross">&#10008;</td>
                 </tr>
                 <tr>
-                    <td data-param="vrm">vrm</td>
+                    <td >vrm</td>
                     <td>string e.g. CX17HHA</td>
-                    <td></td>
+                    <td data-param="vrm"></td>
                     <td class="checkmark">&#10004;</td>
                 </tr>
                 <tr>
@@ -67,13 +69,13 @@
                     <td data-param="registrationDate"></td>
                     <td class="cross">&#10008;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >capCode</td>
                     <td>string e.g. VAAD12ENG3HPIM</td>
                     <td data-param="capCode"></td>
                     <td class="checkmark">&#10004;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >capId</td>
                     <td>number e.g. 72946</td>
                     <td data-param="capId"></td>
@@ -85,19 +87,19 @@
                     <td data-param="cashPrice"></td>
                     <td class="checkmark">&#10004;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >vatIncluded</td>
                     <td>boolean e.g. true</td>
                     <td data-param="vatIncluded"></td>
                     <td class="cross">&#10008;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >vatQualifying</td>
                     <td>boolean e.g. false</td>
                     <td data-param="vatQualifying"></td>
                     <td class="checkmark">&#10004;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >excludeVatAsDeposit</td>
                     <td>boolean e.g. true or false</td>
                     <td data-param="excludeVatAsDeposit"></td>
@@ -115,55 +117,55 @@
                     <td data-param="vehicleImageUrl"></td>
                     <td class="cross">&#10008;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >term</td>
                     <td>number e.g. 48</td>
                     <td data-param="term"></td>
                     <td class="checkmark">&#10004;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >cashDepositType</td>
                     <td>string e.g. flatRate</td>
                     <td data-param="cashDepositType"></td>
                     <td class="cross">&#10008;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >cashDeposit</td>
                     <td>number e.g. 1000</td>
                     <td data-param="cashDeposit"></td>
                     <td class="checkmark">&#10004;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >annualDistance</td>
                     <td>number e.g. 10000</td>
                     <td data-param="annualDistance"></td>
                     <td class="cross">&#10008;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >dateOnForecourt</td>
                     <td>DD/MM/YYYY e.g. dd/mm/yyyy</td>
                     <td data-param="dateOnForecourt"></td>
                     <td class="checkmark">&#10004;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >usePersistedOptions</td>
                     <td>boolean e.g. false</td>
                     <td data-param="usePersistedOptions"></td>
                     <td class="cross">&#10008;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >add-functional_consent</td>
                     <td>boolean e.g. true or false</td>
                     <td data-param="add-functional_consent"></td>
                     <td class="checkmark">&#10004;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >add-analytical_consent</td>
                     <td>boolean e.g. true or false</td>
                     <td data-param="add-analytical_consent"></td>
                     <td class="cross">&#10008;</td>
                 </tr>
-                <tr>
+                <tr class="optional">
                     <td >add-marketing_consent</td>
                     <td>boolean e.g. true or false</td>
                     <td data-param="add-marketing_consent"></td>
@@ -172,6 +174,7 @@
             </tbody>
         </table>
     </div>
+</details>
     
     <div class="response-results">
         <h4>Response Results</h4>

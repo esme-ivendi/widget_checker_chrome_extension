@@ -14,7 +14,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 500px;
     height: max-content;
     overflow-y: auto;
 }
@@ -55,6 +55,9 @@ table, th, td {
 th, td {
     padding: 5px;
     text-align: center;
+    max-width: 100px;
+    word-wrap: break-word;
+
 }
 .checkmark {
     color: green;
@@ -93,4 +96,8 @@ th, td {
     border-radius: 4px;
     background-color: #eee;
     cursor: pointer;
+}
+
+tr.optional {
+    background-color: #f2f2f2;
 }
