@@ -1,11 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    background-color: #f4f4f4;
 }
 .container {
     background-color: #fff;
@@ -17,8 +14,17 @@ body {
     overflow-y: auto;
 }
 .header {
-    text-align: center;
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
+}
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+h2 {
+    color: #64bc46;
 }
 .input-group {
     display: flex;
@@ -39,24 +45,34 @@ body {
     cursor: pointer;
 }
 .table-container {
-    max-height: 350px;
+    max-height: 300px;
     overflow-y: auto;
+    margin-bottom: 20px;
 }
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 table, th, td {
     border: 1px solid #ccc;
 }
+
+tr.optional {
+    background-color: #f2f2f2;
+}
 th, td {
-    padding: 5px;
-    text-align: center;
+    padding: 10px;
+    text-align: left;
     max-width: 100px;
     word-wrap: break-word;
-
 }
+th {
+    background-color: #64bc46;
+    color: #fff;
+}
+
+
 .checkmark {
     color: green;
 }
@@ -66,36 +82,48 @@ th, td {
 .response-results {
     margin-bottom: 10px;
 }
-.copy-btn {
-    padding: 5px 10px;
+.response-results h4 {
+    color: #64bc46;
+}
+.response-results table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.response-results th, .response-results td {
     border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #eee;
+    padding: 10px;
+    text-align: left;
+}
+.response-results th {
+    background-color: #64bc46;
+    color: #fff;
+}
+.response-results td {
+    background-color: #fff;
+}
+.copy-btn {
+    background-color: #64bc46;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
+}
+.copy-btn:hover {
+    background-color: #57a63e;
 }
 .output-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .output-box {
     flex: 1;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #fff;
     overflow-x: auto;
     white-space: nowrap;
-}
-.copy-btn {
-    margin-left: 5px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #eee;
-    cursor: pointer;
-}
-
-tr.optional {
-    background-color: #f2f2f2;
+    margin-bottom: 10px;
 }
