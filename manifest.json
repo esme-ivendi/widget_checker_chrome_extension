@@ -1,15 +1,20 @@
 {
     "manifest_version": 3,
-    "name": "Widget Validator",
+    "name": "iVendi Widget Checker",
     "version": "1.0",
-    "description": "Extracts widget iframe parameters",
+    "description": "Extracts iVendi widget iframe parameters",
     "permissions": ["activeTab", "scripting", "storage"],
     "host_permissions": ["<all_urls>"],
+    "icons": {
+      "48": "icon_48.png"
+  },
     "background": {
       "service_worker": "background.js"
     },
     "action": {
-      "default_popup": "popup.html"
+      "default_popup": "popup.html",
+      "default_icon": "ivendi_icon.png"
     }
   }
+
   
