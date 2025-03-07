@@ -23,9 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
         // results is an array with one object per frame in which the script was executed.
         const widgetSrc = results && results[0] ? results[0].result : "Error extracting widget.";
         document.getElementById("requestURL").textContent = widgetSrc;
+
+        // Extract parameters from the URL and update the table
+        const urlParams = new URLSearchParams(widgetSrc.split('?')[1]);
+        urlParams.forEach((value, key) => {
+          const paramElement = document.querySelector(`td[data-param="${key}"]`);
+          if (paramElement) {
+            paramElement.textContent = value;
+          }
+        });
       });
-    const copyButton = document.getElementById("copyURLButton");
-    copyButton.addEventListener("click", copyURLButton);
+
+      const copyButton = document.getElementById("copyURLButton");
+      copyButton.addEventListener("click", copyURLButton);
     });
   });
 
