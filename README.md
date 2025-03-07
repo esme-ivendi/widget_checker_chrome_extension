@@ -1,1 +1,1 @@
-# widget_checker_chrome_extension
+# iVendi widget_checker_chrome_extension
