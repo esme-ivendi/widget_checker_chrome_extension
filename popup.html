@@ -1,21 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>iVendi Widget Checker</title>
-    <script src="popup.js"></script>
-    <style>
-        html, body {
-            width: 400px;
-            height: 600px;
-            margin: 0;
-            overflow: scroll;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iVendi Widget Checker</title>
+<script src="popup.js"></script>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Widget Checker</h1>
-    <pre id="output" style="text-wrap: wrap;">Loading...</pre>
-    <button id="copyURLButton">Copy text</button>
+
+<div class="container">
+    <div class="header">
+        <h2>iVendi Widget Checker</h2>
+    </div>
+    <div class="output-container">
+        <div id="output" class="output-box">Loading...</div>
+        <button id="copyURLButton" class="copy-btn">Copy text</button>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Param</th>
+                <th>Example</th>
+                <th>Value Used</th>
+                <th>Error</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Param 1</td>
+                <td>Example 1</td>
+                <td>Value 1</td>
+                <td class="checkmark">&#10004;</td>
+            </tr>
+            <tr>
+                <td>Param 2</td>
+                <td>Example 2</td>
+                <td>Value 2</td>
+                <td class="cross">&#10008;</td>
+            </tr>
+            <tr>
+                <td>Param 3</td>
+                <td>Example 3</td>
+                <td>Value 3</td>
+                <td class="checkmark">&#10004;</td>
+            </tr>
+            <tr>
+                <td>Param 4</td>
+                <td>Example 4</td>
+                <td>Value 4</td>
+                <td class="cross">&#10008;</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="response-results">
+        <h4>Response Results</h4>
+        <table>
+            <tr>
+                <td>Product</td>
+                <td>Error</td>
+            </tr>
+        </table>
+    </div>
+    
+    <button class="copy-btn">Copy</button>
+</div>
+
 </body>
 </html>
-
