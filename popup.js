@@ -24,6 +24,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const widgetSrc = results && results[0] ? results[0].result : "Error extracting widget.";
         document.getElementById("output").textContent = widgetSrc;
       });
+    const copyButton = document.getElementById("copyURLButton");
+    copyButton.addEventListener("click", copyURLButton);
     });
   });
-  
+
+  function copyURLButton() {
+    console.log("Hello from Button!")
+    // Get the text field
+    const outputElement = document.getElementById("output");
+    const textToCopy = outputElement.innerText || outputElement.textContent;
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alert("Text copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy text:", err);
+    });
+  }
