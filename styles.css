@@ -15,7 +15,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 400px;
-    max-height: 600px;
+    height: max-content;
     overflow-y: auto;
 }
 .header {
@@ -41,7 +41,7 @@ body {
     cursor: pointer;
 }
 .table-container {
-    max-height: 300px;
+    max-height: 350px;
     overflow-y: auto;
 }
 table {
