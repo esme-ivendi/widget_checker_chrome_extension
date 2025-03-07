@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
             paramElement.textContent = value;
           }
         });
+
+        // Check for empty 'value used' entries and update the 'Error ?' column
+        updateErrorColumn();
       });
 
       const copyButton = document.getElementById("copyURLButton");
@@ -49,5 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Text copied to clipboard!");
     }).catch(err => {
         console.error("Failed to copy text:", err);
+    });
+  }
+
+  function updateErrorColumn() {
+    const table = document.getElementById('paramsTable');
+    const rows = table.querySelectorAll('tbody tr:not(.optional)');
+
+    rows.forEach(row => {
+        const valueUsedCell = row.querySelector('td[data-param]');
+        const errorCell = row.querySelector('td:last-child');
+
+        if (!valueUsedCell.textContent.trim()) {
+            errorCell.innerHTML = '&#10008;'; // Cross mark
+            errorCell.classList.add('cross');
+        }
     });
   }
