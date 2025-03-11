@@ -16,6 +16,7 @@ body {
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 .logo {
@@ -114,7 +115,7 @@ td[data-param] input {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 0;
+    border-radius: 0 5px 5px 0;
 }
 .copy-btn:hover {
     background-color: #57a63e;
@@ -128,8 +129,19 @@ td[data-param] input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 0;
+    border-radius: 5px 0 0 5px;
     background-color: #fff;
     overflow-x: auto;
     white-space: nowrap;
+}
+.reload-btn {
+    background-color: #64bc46;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.reload-btn:hover {
+    background-color: #57a63e;
 }

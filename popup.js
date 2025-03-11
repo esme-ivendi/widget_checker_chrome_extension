@@ -40,6 +40,30 @@ document.addEventListener("DOMContentLoaded", () => {
       const copyButton = document.getElementById("copyURLButton");
       copyButton.addEventListener("click", copyURLButton);
     });
+  
+    document.getElementById("reloadFrame").addEventListener("click", () => {
+      const newURL = buildNewURL(); // Get the new URL from buildNewURL function
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+          chrome.scripting.executeScript({
+              target: { tabId: tabs[0].id },
+              function: (newURL) => {
+                const iframe = document.getElementById("iv-finance-widget"); // Adjust selector
+                if (iframe) {
+                    iframe.src = newURL; // Reload the iframe with the new URL
+                    console.log("Iframe reloaded with new URL:", newURL);
+                    // Manually trigger a resize event or apply necessary styles
+                    iframe.onload = () => {
+                      const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                      iframe.style.height = iframeDocument.body.scrollHeight + 'px';
+                    };
+                } else {
+                    console.log("Iframe not found.");
+                }
+              },
+              args: [newURL]
+          });
+      });
+    });
   });
 
   function copyURLButton() {
@@ -69,3 +93,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
   }
+
+  function buildNewURL() {
+    const baseURL = "https://newvehicle.com/widgets/lib/finance-comparator-convert/";
+    const params = new URLSearchParams();
+
+    const table = document.getElementById('paramsTable');
+    const inputs = table.querySelectorAll('tbody tr td[data-param] input');
+
+    inputs.forEach(input => {
+        const paramName = input.getAttribute('data-param');
+        const paramValue = input.value.trim();
+        if (paramValue) {
+            params.append(paramName, paramValue);
+        }
+    });
+
+    return `${baseURL}?${params.toString()}`;
+  }
+
