@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Extract parameters from the URL and update the table
         const urlParams = new URLSearchParams(widgetSrc.split('?')[1]);
         urlParams.forEach((value, key) => {
-          const paramElement = document.querySelector(`td[data-param="${key}"]`);
+          const paramElement = document.querySelector(`td[data-param="${key}"] input`);
           if (paramElement) {
-            paramElement.textContent = value;
+            paramElement.value = value;
           }
         });
 
@@ -60,10 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const rows = table.querySelectorAll('tbody tr:not(.optional)');
 
     rows.forEach(row => {
-        const valueUsedCell = row.querySelector('td[data-param]');
+        const valueUsedCell = row.querySelector('td[data-param] input');
         const errorCell = row.querySelector('td:last-child');
 
-        if (!valueUsedCell.textContent.trim()) {
+        if (!valueUsedCell.value.trim()) {
             errorCell.innerHTML = '&#10008;'; // Cross mark
             errorCell.classList.add('cross');
         }
