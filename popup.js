@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Extract parameters from the URL and update the table
         const urlParams = new URLSearchParams(widgetSrc.split('?')[1]);
         urlParams.forEach((value, key) => {
-          const paramElement = document.querySelector(`td[data-param="${key}"]`);
+          const paramElement = document.querySelector(`td[data-param="${key}"] input`);
           if (paramElement) {
-            paramElement.textContent = value;
+            paramElement.value = value;
           }
         });
 
@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const copyButton = document.getElementById("copyURLButton");
       copyButton.addEventListener("click", copyURLButton);
     });
+
 
     // Example function to fetch response data
     function fetchResponseData(widgetSrc) {
@@ -119,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function isValidVrm(vrm) {
       const regex = /[0-9A-Z]{7}/gi;
         return regex.test(vrm);
+
   }
 
     function isValidRegistrationDate(registrationDate) {
