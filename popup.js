@@ -128,7 +128,7 @@ function buildNewURL() {
 }
 
 function isValidUsername(username) {
-    const regex = /^www\.[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
+    const regex = /^www\.[a-zA-Z0-9-]+\.(co\.uk|com|org|net)$/i;
     return regex.test(username);
 }
 
