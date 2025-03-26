@@ -97,13 +97,18 @@ function updateErrorColumn() {
         const paramValue = valueUsedCell.value.trim();
 
         if (!paramValue) {
-            setErrorCell(errorCell);
+            // If the row is optional, display a check mark
+            if (row.classList.contains('optional')) {
+                setCheckMarkCell(errorCell);
+            } else {
+                setErrorCell(errorCell); // For required fields, display a cross mark
+            }
         } else {
             const isValidFunction = getValidationFunction(paramName);
             if (isValidFunction && !isValidFunction(paramValue)) {
-                setErrorCell(errorCell);
+                setErrorCell(errorCell); // Invalid value
             } else {
-                setCheckMarkCell(errorCell);
+                setCheckMarkCell(errorCell); // Valid value
             }
         }
     });
